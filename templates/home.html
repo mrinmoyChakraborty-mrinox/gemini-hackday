@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"{{title}}"</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">{{title}}</h1>
+
+        <form id="emailForm" class="email-form" method="post" action="/generate">
+            <div class="form-group">
+                <label for="purpose">Purpose of the email:</label>
+                <textarea id="purpose" name="purpose" rows="3" class="form-control" placeholder="Describe the purpose of the email"></textarea>
+            </div>
+
+            <fieldset>
+                <legend>Select tone:</legend>
+                <div class="radio-group">
+                    <label class="radio-label"><input type="radio" name="tone" value="Formal" checked> Formal</label>
+                    <label class="radio-label"><input type="radio" name="tone" value="Friendly"> Friendly</label>
+                    <label class="radio-label"><input type="radio" name="tone" value="Apology"> Apology</label>
+                    <label class="radio-label"><input type="radio" name="tone" value="Academic"> Academic</label>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <button type="submit" class="btn-submit">Generate Email</button>
+            </div>
+        </form>
+
+        <div id="responseContainer" class="response-container" style="display: none;">
+        </div>
+        {{response_}}
+    </div>
+
+</body>
+</html>
