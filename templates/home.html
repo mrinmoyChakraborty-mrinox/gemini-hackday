@@ -9,6 +9,8 @@
 </head>
 <body>
     <div class="container">
+        <img src="{{ url_for('static', filename='images/mail_genie_logo.png') }}" 
+     alt="Mail Genie Logo" class="app-logo">
         <h1 class="page-title">Mail Genie</h1>
 
         <form id="emailForm" class="email-form" method="post" action="/generate">
