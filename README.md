@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="static/images/mail_genie_logo.png" alt="Mail Genie Logo" width="120"/>
+</p>
 # 📧 MailGenie - Smart Email Writer (Flask Version)
 
 MailGenie is a beginner-friendly web app built with Flask and Google’s Gemini API.
