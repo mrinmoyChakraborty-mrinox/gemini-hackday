@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="page-title">{{title}}</h1>
+        <h1 class="page-title">Mail Genie</h1>
 
         <form id="emailForm" class="email-form" method="post" action="/generate">
             <div class="form-group">
@@ -32,10 +32,14 @@
             </div>
         </form>
 
-        <div id="responseContainer" class="response-container" style="display: none;">
+        <{% if response_ %}
+        <div id="responseContainer" class="response-container">
+            <h2>📨 Generated Email</h2>
+            <div class="email-output">
+                {{ response_|safe }}
+            </div>
         </div>
-        {{response_}}
-    </div>
+        {% endif %}
 
 </body>
 </html>
