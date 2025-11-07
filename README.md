@@ -48,7 +48,7 @@ python app.py
 
 Go to 👉 "http://127.0.0.1:5000" (http://127.0.0.1:5000)
 
-Or Juat Use It Directly From - https://gemini-hackday-l40u3kqu7-mrinmoy-chakrabortys-projects.vercel.app
+Or Juat Use It Directly From - https://gemini-hackday-two.vercel.app
 
 ---
 ## 🧠 Concepts Learned
