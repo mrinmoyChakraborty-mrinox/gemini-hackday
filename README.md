@@ -81,15 +81,6 @@ Or Just Use It Directly From - https://gemini-mail-genie.vercel.app
 
 ---
 
-## 🧩 Hacktoberfest 2025 (If Applicable)
-
-- [ ] This PR is for Hacktoberfest 2025
-- [ ] My code follows the repository’s guidelines
-- [ ] I have commented and formatted the code
-- [ ] I have tested the app locally and it works correctly
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome!
