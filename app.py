@@ -20,7 +20,19 @@ def generate_email():
 
     # Use the Gemini model
     model = genai.GenerativeModel('gemini-2.5-flash')
-    prompt = f"Write a {tone.lower()} email for the following purpose: {purpose}"
+    prompt = f'''You are an expert email writing assistant named Mail Genie.
+Your job is to write a complete, well-formatted email based on the user's purpose.
+
+Guidelines:
+- The email must sound {tone.lower()} in tone.
+- Begin with an appropriate greeting (e.g., 'Dear Sir/Madam', 'Hi [Name]', etc. depending on tone).
+- End with a suitable closing and signature.
+- Keep the language natural, polite, and concise.
+- Format the response in clear paragraphs with line breaks.
+- Do NOT include placeholders like [Name] or [Company] unless absolutely necessary.
+
+Now, write the best possible email for this purpose:
+\"\"\"{purpose}\"\"\" '''
     
     response = model.generate_content(prompt)
     return render_template("home.html", title='Email Generator', response_=response.text)

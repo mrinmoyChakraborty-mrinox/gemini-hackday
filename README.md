@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="static/images/mail_genie_logo.png" alt="Mail Genie Logo" width="120"/>
+</p>
+
+---
 # 📧 MailGenie - Smart Email Writer (Flask Version)
 
 MailGenie is a beginner-friendly web app built with Flask and Google’s Gemini API.
@@ -45,8 +50,9 @@ python app.py
 
 Go to 👉 "http://127.0.0.1:5000" (http://127.0.0.1:5000)
 
----
+Or Just Use It Directly From - https://gemini-mail-genie.vercel.app
 
+---
 ## 🧠 Concepts Learned
 
 - Integrating Gemini API with Flask

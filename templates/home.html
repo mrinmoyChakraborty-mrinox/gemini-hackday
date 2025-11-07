@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"{{title}}"</title>
+    <title>Mail Genie</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
     <div class="container">
-        <h1 class="page-title">{{title}}</h1>
+        <img src="{{ url_for('static', filename='images/mail_genie_logo.png') }}" 
+     alt="Mail Genie Logo" class="app-logo">
+        <h1 class="page-title">Mail Genie</h1>
 
         <form id="emailForm" class="email-form" method="post" action="/generate">
             <div class="form-group">
@@ -32,10 +34,14 @@
             </div>
         </form>
 
-        <div id="responseContainer" class="response-container" style="display: none;">
+        <{% if response_ %}
+        <div id="responseContainer" class="response-container">
+            <h2>📨 Generated Email</h2>
+            <div class="email-output">
+                {{ response_|safe }}
+            </div>
         </div>
-        {{response_}}
-    </div>
+        {% endif %}
 
 </body>
 </html>
