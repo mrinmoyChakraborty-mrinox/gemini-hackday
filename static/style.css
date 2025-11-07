@@ -1,183 +1,199 @@
-flask/* General form styling */
-.email-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
+/* ===============================
+   🌙 Global Dark Theme Setup
+=============================== */
+body {
+    background-color: #0d1117;
+    color: #e6edf3;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Form groups */
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #161b22;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+/* ===============================
+   🌟 Page Title Styling
+=============================== */
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #58a6ff;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.page-title:hover {
+    color: #79c0ff;
+    transform: scale(1.03);
+}
+
+/* ===============================
+   🧾 Form Styling
+=============================== */
+.email-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .form-group {
     margin-bottom: 1.5rem;
 }
 
-/* Labels */
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: #333;
+    color: #c9d1d9;
+    transition: color 0.3s ease;
 }
 
-/* Textarea styling */
+.form-group label:hover {
+    color: #58a6ff;
+}
+
+/* Textarea and Input Fields */
 .form-control {
     width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 0.9rem;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    background-color: #0d1117;
+    color: #e6edf3;
     font-size: 1rem;
-    transition: border-color 0.2s ease;
+    transition: all 0.3s ease;
 }
 
-.form-control:focus {
-    border-color: #4a90e2;
+.form-control:focus,
+.form-control:hover {
+    border-color: #58a6ff;
+    box-shadow: 0 0 8px rgba(88, 166, 255, 0.4);
     outline: none;
-    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
 }
 
-/* Fieldset styling */
+/* ===============================
+   🔘 Radio Buttons
+=============================== */
 fieldset {
-    border: 1px solid #ddd;
+    border: 1px solid #30363d;
+    border-radius: 6px;
     padding: 1rem;
-    border-radius: 4px;
     margin-bottom: 1.5rem;
+    transition: border-color 0.3s ease;
+}
+
+fieldset:hover {
+    border-color: #58a6ff;
 }
 
 legend {
+    color: #c9d1d9;
     padding: 0 0.5rem;
     font-weight: 500;
-    color: #333;
 }
 
-/* Radio buttons container */
 .radio-group {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-/* Radio button labels */
 .radio-label {
     display: flex;
     align-items: center;
     cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+    background-color: #21262d;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
 .radio-label:hover {
-    background-color: #f5f5f5;
+    background-color: #30363d;
+    transform: translateY(-2px);
 }
 
-/* Submit button */
+/* ===============================
+   🚀 Submit Button
+=============================== */
 .btn-submit {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
+    padding: 0.9rem 1.6rem;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     color: #ffffff;
-    background-color: #4a90e2;
+    background-color: #238636;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    width: 100%;
 }
 
 .btn-submit:hover {
-    background-color: #357abd;
-    transform: translateY(-1px);
+    background-color: #2ea043;
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px rgba(46, 160, 67, 0.6);
 }
 
 .btn-submit:active {
     transform: translateY(0);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .email-form {
-        margin: 1rem;
-        padding: 1rem;
-    }
-    
-    .btn-submit {
-        width: 100%;
-    }
-}
-
-/* Main container */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-/* Page title */
-.page-title {
-    text-align: center;
-    color: #333;
-    margin-bottom: 2rem;
-}
 /* ===============================
-   AI Response Section Styling
+   💌 AI Response Section
 =============================== */
-
 .response-container {
     margin-top: 2rem;
     padding: 1.5rem;
-    background: #f9fafc;
+    background: #0d1117;
+    border: 1px solid #30363d;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e0e0e0;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    box-shadow: 0 0 12px rgba(88, 166, 255, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.response-container:hover {
+    box-shadow: 0 0 16px rgba(88, 166, 255, 0.4);
+    transform: translateY(-3px);
 }
 
 .response-container h2 {
-    margin-bottom: 1rem;
-    color: #333;
-    font-size: 1.4rem;
-    font-weight: 600;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    color: #79c0ff;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #30363d;
     padding-bottom: 0.5rem;
 }
 
-/* Email text formatting */
+/* Email Text */
 .email-output {
-    font-family: "Segoe UI", Roboto, sans-serif;
-    color: #222;
-    line-height: 1.7;
-    white-space: pre-wrap; /* preserves line breaks */
-    padding: 1rem;
-    background-color: #ffffff;
+    background: #161b22;
+    padding: 1.2rem;
     border-radius: 8px;
+    color: #e6edf3;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    font-size: 1rem;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Optional nice-looking scrollbar */
-.email-output::-webkit-scrollbar {
-    width: 6px;
-}
-.email-output::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 3px;
-}
-.email-output::-webkit-scrollbar-thumb:hover {
-    background: #999;
-}
-
-/* Responsive */
+/* ===============================
+   📱 Responsive
+=============================== */
 @media (max-width: 768px) {
-    .response-container {
-        margin: 1rem;
+    .container {
         padding: 1rem;
     }
-    .email-output {
-        font-size: 0.95rem;
+    .page-title {
+        font-size: 1.6rem;
     }
 }
-
